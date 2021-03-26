@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/image/freexitlogo.png';
+import logo from '../../assets/image/logo.png';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Text,StyleSheet,View,Image,Dimensions,TouchableOpacity} from 'react-native';
 

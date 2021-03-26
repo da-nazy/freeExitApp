@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from '../assets/image/freexitlogo.png';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Text,StyleSheet,View,Image,Dimensions,TouchableOpacity} from 'react-native';
 
-export default function Getstarted() {
-   
+export default function Getstarted(props) {
+    console.log(props);
+    const {navigate}=props.navigation;
     return (
        
-           <TouchableOpacity style={style.btnhead} >
-             <View style={style.mbody}>
+           <TouchableOpacity style={style.btnhead}  onPress={() =>
+           navigate('Login')
+            }>
+             <View style={style.mbody}  >
                  <Text style={style.textbdy}>GET STARTED</Text>
                  <Icon  style={style.icon} name="chevron-right" size={15} color="#fff"/>
              </View>
@@ -19,7 +21,6 @@ export default function Getstarted() {
 
 const style=StyleSheet.create({
     btnhead:{
-        
         backgroundColor:'#9A1D93',
         width:Dimensions.get('window').width/1.3,
         height:45,
